@@ -2,10 +2,7 @@ import pandas as pd
 import os
 from crewai import Agent, Task, Crew
 from langchain_groq import ChatGroq
-# from langchain_google_genai import ChatGoogleGenerativeAI
-
-# os.environ["GOOGLE_API_KEY"] = "AIzaSyC0ciatn3kSFIcGj3RU3l3jfqF_3XCfNWQ"
-
+# from langchain_google_genai import ChatGoogleGenerativeAi
 def write_output(agent, output):
     with open("agents_output.md", "a", encoding="utf-8") as f:
         # Section divider
@@ -53,7 +50,7 @@ def main():
     model = "llama3-70b-8192"
     llm = ChatGroq(
             temperature=0, 
-            api_key = "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", 
+            api_key = "", 
             model_name=model
         )
     
